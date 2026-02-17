@@ -1,0 +1,189 @@
+<svg width="1400" height="420" viewBox="0 0 1400 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020606"/>
+      <stop offset="50%" stop-color="#04120f"/>
+      <stop offset="100%" stop-color="#010303"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="72%" cy="46%" r="48%">
+      <stop offset="0%" stop-color="#00ffa6" stop-opacity="0.34"/>
+      <stop offset="70%" stop-color="#00ffa6" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#00ffa6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="neonLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ff99"/>
+      <stop offset="100%" stop-color="#00d1ff"/>
+    </linearGradient>
+    <linearGradient id="scanBeam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ff99" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00ff99" stop-opacity="0.58"/>
+      <stop offset="100%" stop-color="#00ff99" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="microGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00ff99" stroke-opacity="0.13" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1400" height="420" fill="url(#bg)"/>
+  <rect width="1400" height="420" fill="url(#microGrid)"/>
+  <rect width="1400" height="420" fill="url(#coreGlow)"/>
+
+  <g opacity="0.16" stroke="#00ff99" stroke-width="2" filter="url(#glow)">
+    <line x1="0" y1="95" x2="1400" y2="95" stroke-dasharray="10 14">
+      <animate attributeName="stroke-dashoffset" from="0" to="420" dur="7.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="336" x2="1400" y2="336" stroke-dasharray="10 14">
+      <animate attributeName="stroke-dashoffset" from="420" to="0" dur="7.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <g stroke="#00ff99" stroke-opacity="0.24" stroke-width="1.2">
+    <line x1="0" y1="420" x2="700" y2="148"/>
+    <line x1="110" y1="420" x2="700" y2="148"/>
+    <line x1="220" y1="420" x2="700" y2="148"/>
+    <line x1="330" y1="420" x2="700" y2="148"/>
+    <line x1="440" y1="420" x2="700" y2="148"/>
+    <line x1="560" y1="420" x2="700" y2="148"/>
+    <line x1="670" y1="420" x2="700" y2="148"/>
+    <line x1="780" y1="420" x2="700" y2="148"/>
+    <line x1="890" y1="420" x2="700" y2="148"/>
+    <line x1="1010" y1="420" x2="700" y2="148"/>
+    <line x1="1120" y1="420" x2="700" y2="148"/>
+    <line x1="1230" y1="420" x2="700" y2="148"/>
+    <line x1="1340" y1="420" x2="700" y2="148"/>
+    <line x1="1400" y1="420" x2="700" y2="148"/>
+  </g>
+
+  <g stroke="#00ff99" stroke-opacity="0.22" stroke-width="1.1">
+    <line x1="40" y1="395" x2="1360" y2="395"/>
+    <line x1="85" y1="368" x2="1315" y2="368"/>
+    <line x1="130" y1="341" x2="1270" y2="341"/>
+    <line x1="175" y1="314" x2="1225" y2="314"/>
+    <line x1="220" y1="287" x2="1180" y2="287"/>
+    <line x1="265" y1="260" x2="1135" y2="260"/>
+  </g>
+
+  <rect x="0" y="0" width="1400" height="8" fill="url(#scanBeam)" opacity="0.8">
+    <animate attributeName="y" values="-10;422;-10" dur="6.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <g fill="#00ff99" font-family="Fira Code, monospace" font-size="14" opacity="0.23">
+    <text x="30" y="24">10110110 00101001 10101000 11010010</text>
+    <text x="970" y="36">secure_channel://active</text>
+    <text x="1110" y="384">threat_feed: live</text>
+  </g>
+
+  <g stroke="#00ff99" stroke-width="1.6" stroke-opacity="0.3" filter="url(#glow)">
+    <line x1="36" y1="60" x2="36" y2="345" stroke-dasharray="8 10">
+      <animate attributeName="stroke-dashoffset" from="0" to="240" dur="7s" repeatCount="indefinite"/>
+    </line>
+    <line x1="74" y1="60" x2="74" y2="345" stroke-dasharray="8 10">
+      <animate attributeName="stroke-dashoffset" from="240" to="0" dur="7s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <g>
+    <rect x="48" y="58" width="760" height="248" rx="16" fill="#020806" fill-opacity="0.52" stroke="#00ff99" stroke-opacity="0.45"/>
+    <rect x="58" y="70" width="740" height="224" rx="12" fill="none" stroke="#00ff99" stroke-opacity="0.2"/>
+  </g>
+
+  <g font-family="Fira Code, monospace">
+    <text x="82" y="126" font-size="58" font-weight="700" fill="#00ff99" filter="url(#glow)">PIYUSH KUMAR</text>
+    <text x="84" y="126" font-size="58" font-weight="700" fill="#00d1ff" opacity="0.35">
+      PIYUSH KUMAR
+      <animate attributeName="x" values="84;89;84;80;84" dur="2.2s" repeatCount="indefinite"/>
+    </text>
+    <text x="82" y="168" font-size="22" fill="#8bffd5">HACKER | CYBERSECURITY SPECIALIST</text>
+    <text x="82" y="202" font-size="18" fill="#7cffcb">RED TEAMING . SOC . FORENSICS . CYBER WARFARE</text>
+    <text x="82" y="246" font-size="17" fill="#a5ffdd">[SYS] Initializing command center...</text>
+    <text x="82" y="274" font-size="17" fill="#a5ffdd">[STAT] Threat model active | Defensive posture hardened</text>
+  </g>
+
+  <rect x="596" y="260" width="8" height="18" fill="#00ff99">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <g transform="translate(1040 214)" filter="url(#glow)">
+    <g stroke="url(#neonLine)" fill="none">
+      <circle cx="0" cy="0" r="126" stroke-width="2.5" opacity="0.44"/>
+      <circle cx="0" cy="0" r="94" stroke-width="2.2" opacity="0.52"/>
+      <circle cx="0" cy="0" r="62" stroke-width="1.9" opacity="0.62"/>
+      <circle cx="0" cy="0" r="34" stroke-width="1.6" opacity="0.78"/>
+    </g>
+    <g stroke="#00ff99" fill="none" stroke-width="2.6">
+      <polygon points="0,-74 64,-37 64,37 0,74 -64,37 -64,-37"/>
+      <polygon points="0,-48 42,-24 42,24 0,48 -42,24 -42,-24" opacity="0.8"/>
+      <line x1="-140" y1="0" x2="140" y2="0" opacity="0.42"/>
+      <line x1="0" y1="-140" x2="0" y2="140" opacity="0.42"/>
+    </g>
+
+    <g fill="#00ff99">
+      <circle cx="0" cy="-126" r="4.5">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g fill="#00d1ff">
+      <circle cx="0" cy="-94" r="4">
+        <animateTransform attributeName="transform" type="rotate" values="360;0" dur="5.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g fill="#8dffe1">
+      <circle cx="0" cy="-62" r="3.6">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="3.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <g stroke="#00ff99" fill="none" stroke-width="2.1" opacity="0.86">
+      <polygon points="-50,-28 0,-56 50,-28 0,0"/>
+      <polygon points="-50,-28 -50,26 0,54 0,0"/>
+      <polygon points="50,-28 50,26 0,54 0,0"/>
+      <line x1="0" y1="-56" x2="0" y2="0"/>
+      <line x1="-50" y1="26" x2="0" y2="0"/>
+      <line x1="50" y1="26" x2="0" y2="0"/>
+    </g>
+    <animateTransform attributeName="transform" type="rotate" values="-8;8;-8" dur="6.3s" repeatCount="indefinite"/>
+  </g>
+
+  <g>
+    <rect x="48" y="330" width="450" height="14" rx="7" fill="#052218"/>
+    <rect x="48" y="330" width="210" height="14" rx="7" fill="#00ff99" opacity="0.82">
+      <animate attributeName="width" values="210;370;210" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="520" y="330" width="288" height="14" rx="7" fill="#052218"/>
+    <rect x="520" y="330" width="120" height="14" rx="7" fill="#00d1ff" opacity="0.72">
+      <animate attributeName="width" values="120;250;120" dur="3.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g fill="#00ff99" font-family="Fira Code, monospace" font-size="14">
+    <text x="52" y="356" opacity="0.85">[Monitoring]</text>
+    <text x="524" y="356" opacity="0.85">[Incident Readiness]</text>
+  </g>
+
+  <g stroke="#00ff99" stroke-width="2.2" opacity="0.62" filter="url(#glow)">
+    <path d="M 18 18 L 72 18 L 72 36"/>
+    <path d="M 1328 18 L 1382 18 L 1382 72"/>
+    <path d="M 18 348 L 18 402 L 72 402"/>
+    <path d="M 1328 402 L 1382 402 L 1382 348"/>
+  </g>
+
+  <g fill="#00ff99">
+    <circle cx="818" cy="82" r="4.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="842" cy="82" r="4.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.18s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="866" cy="82" r="4.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.36s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
