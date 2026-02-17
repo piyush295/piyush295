@@ -1,9 +1,12 @@
+```bash
+cat about.md
+```
+
 ### SYSTEM PROFILE
 
-Name        :: Piyush Kumar
-Role        :: Cybersecurity Specialist
-Rank        :: Top 145 TryHackMe
-Focus       :: Red Team | Pentesting | Cyber Warfare
-Location    :: India
+Name        :: Piyush Kumar  
+Role        :: Cybersecurity Specialist  
+Rank        :: Top 145 – TryHackMe  
+Focus       :: Red Team | Pentesting | Digital Forensics  
 
-> Building resilient digital defense systems through offensive security.
+Mission     :: Strengthening digital infrastructure through offensive security research.
