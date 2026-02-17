@@ -11,16 +11,14 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: Generate profile summary cards
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate cards
+      - name: Generate profile summary cards
         uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          USERNAME: piyush295
-          BRANCH_NAME: profile-summary-card-output
-          AUTO_PUSH: true
-          UTC_OFFSET: 5.5
+          USERNAME: ${{ github.repository_owner }}
