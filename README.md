@@ -1,6 +1,7 @@
-[Uploading README.md…]()
+[README.md](https://github.com/user-attachments/files/25353143/README.md)
 <!--
-Replace `hackerpiyush295` with your exact GitHub username everywhere if needed.
+GitHub username is set to `piyush295`.
+Replace `piyush295` everywhere only if your username changes.
 For profile README, place this file in repo: github.com/<username>/<username>
 -->
 
@@ -22,8 +23,8 @@ For profile README, place this file in repo: github.com/<username>/<username>
   <a href="https://linkedin.com/in/hackerpiyush295">
     <img src="https://img.shields.io/badge/LinkedIn-00FF99?style=for-the-badge&logo=linkedin&logoColor=black" alt="LinkedIn" />
   </a>
-  <img src="https://img.shields.io/github/followers/hackerpiyush295?label=FOLLOWERS&style=for-the-badge&color=00FF99&labelColor=0d1117" alt="Followers" />
-  <img src="https://komarev.com/ghpvc/?username=hackerpiyush295&label=PROFILE+VIEWS&color=00ff99&style=for-the-badge" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/piyush295?label=FOLLOWERS&style=for-the-badge&color=00FF99&labelColor=0d1117" alt="Followers" />
+  <img src="https://komarev.com/ghpvc/?username=piyush295&label=PROFILE+VIEWS&color=00ff99&style=for-the-badge" alt="Profile views" />
 </p>
 
 <p align="center">
@@ -75,22 +76,24 @@ $ mission --active
 ## Live GitHub Command Center
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=hackerpiyush295&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&icon_color=00ff99&title_color=00ff99" alt="GitHub stats" />
-  <img width="49%" src="https://streak-stats.demolab.com?user=hackerpiyush295&theme=chartreuse-dark&hide_border=true&background=0D1117&ring=00ff99&fire=00ff99&currStreakLabel=00ff99" alt="GitHub streak" />
+  <img width="49%" src="https://raw.githubusercontent.com/piyush295/piyush295/profile-summary-card-output/github_dark/3-stats.svg" alt="GitHub stars and stats" />
+  <img width="49%" src="https://raw.githubusercontent.com/piyush295/piyush295/profile-summary-card-output/github_dark/1-repos-per-language.svg" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hackerpiyush295&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff99" alt="Top languages" />
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hackerpiyush295&theme=github_dark" alt="Profile details" />
+  <img width="98%" src="https://raw.githubusercontent.com/piyush295/piyush295/profile-summary-card-output/github_dark/0-profile-details.svg" alt="Profile details" />
 </p>
 
 <p align="center">
-  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=hackerpiyush295&bg_color=0d1117&color=00ff99&line=00ff99&point=6bffca&area=true&hide_border=true" alt="Activity graph" />
+  <img width="49%" src="https://raw.githubusercontent.com/piyush295/piyush295/profile-summary-card-output/github_dark/2-most-commit-language.svg" alt="Most commit language" />
+  <img width="49%" src="https://raw.githubusercontent.com/piyush295/piyush295/profile-summary-card-output/github_dark/4-productive-time.svg" alt="Productive time" />
 </p>
 
 <p align="center">
-  <img width="98%" src="https://github-profile-trophy.vercel.app/?username=hackerpiyush295&theme=matrix&no-frame=true&no-bg=true&row=1&column=7&margin-w=8" alt="GitHub trophies" />
+  <img width="98%" src="./assets/github-trophies-panel.svg" alt="GitHub trophies panel" />
 </p>
+
+> If cards are not visible yet: run workflow `Generate Profile Summary Cards` once in the `Actions` tab.
 
 ## Professional Highlights
 
