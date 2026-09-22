@@ -9,6 +9,10 @@ For profile README, place this file in repo: github.com/<username>/<username>
   <img src="./assets/cyber-hacker-3d.svg" alt="Hacker 3D Animated Banner" width="100%" />
 </p>
 
+<p align="center">
+  <img src="./assets/piyush_logo.png" alt="Piyush Kumar - Cyber Crime Investigator" width="220" />
+</p>
+
 <h1 align="center">PIYUSH KUMAR</h1>
 <h3 align="center">Hacker | Cybersecurity Specialist | Cyber/Electronic Operations & Warfare | Digital Forensics | Cyber Crime Investigator | Author</h3>
 
