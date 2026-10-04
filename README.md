@@ -96,9 +96,11 @@ $ mission --active
   <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=piyush295&layout=compact&hide_border=true&title_color=00ff99&text_color=c9d1d9&bg_color=0d1117" alt="Top languages" />
 </p>
 
-<!-- Animated contribution activity graph -->
+<!-- Repo & commit activity (stable, no workflow) -->
 <p align="center">
-  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=piyush295&bg_color=0d1117&color=00ff99&line=00ff99&point=ffffff&area=true&hide_border=true" alt="Contribution activity graph" />
+  <img width="32%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=piyush295&theme=github_dark" alt="Repos per language" />
+  <img width="32%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=piyush295&theme=github_dark" alt="Most commit language" />
+  <img width="32%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=piyush295&theme=github_dark&utcOffset=5.5" alt="Productive time" />
 </p>
 
 <!-- ============== PROFILE SUMMARY (animated, no workflow needed) ============== -->
@@ -119,9 +121,13 @@ $ mission --active
 -->
 
 <!-- ============== TROPHIES ============== -->
-<p align="center">
-  <img width="98%" src="https://github-profile-trophy.vercel.app/?username=piyush295&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8" alt="GitHub trophies" />
-</p>
+<!--
+  GitHub trophy panel (optional): the github-profile-trophy service is
+  currently rate-limited (HTTP 402). Re-enable later if it recovers:
+  <p align="center">
+    <img width="98%" src="https://github-profile-trophy.vercel.app/?username=piyush295&theme=matrix&no-frame=true&no-bg=true&column=7" alt="GitHub trophies" />
+  </p>
+-->
 
 > All stats, graphs and cards above are live and render automatically.
 
