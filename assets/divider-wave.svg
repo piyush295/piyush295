@@ -1,0 +1,39 @@
+<svg width="1600" height="60" viewBox="0 0 1600 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="dLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ff99" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#00ff99"/>
+      <stop offset="50%" stop-color="#00ffe1"/>
+      <stop offset="75%" stop-color="#00d1ff"/>
+      <stop offset="100%" stop-color="#00d1ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="dGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Main sine wave -->
+  <path d="M0,30 Q200,10 400,30 T800,30 T1200,30 T1600,30" fill="none" stroke="url(#dLine)" stroke-width="2.5" filter="url(#dGlow)">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+             values="M0,30 Q200,10 400,30 T800,30 T1200,30 T1600,30;
+                     M0,30 Q200,50 400,30 T800,30 T1200,30 T1600,30;
+                     M0,30 Q200,10 400,30 T800,30 T1200,30 T1600,30"/>
+  </path>
+  <!-- Dash overlay -->
+  <line x1="0" y1="30" x2="1600" y2="30" stroke="#00ff99" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="4 10" filter="url(#dGlow)">
+    <animate attributeName="stroke-dashoffset" from="0" to="140" dur="6s" repeatCount="indefinite"/>
+  </line>
+  <!-- Nodes with pulse -->
+  <circle cx="400" cy="30" r="4" fill="#00ff99" filter="url(#dGlow)">
+    <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="30" r="5" fill="#00ffe1" filter="url(#dGlow)">
+    <animate attributeName="r" values="4;7;4" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1200" cy="30" r="4" fill="#00d1ff" filter="url(#dGlow)">
+    <animate attributeName="r" values="3;6;3" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

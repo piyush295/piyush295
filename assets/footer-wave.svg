@@ -1,0 +1,53 @@
+<svg width="1600" height="140" viewBox="0 0 1600 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="fBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000308" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#010a0c"/>
+    </linearGradient>
+    <linearGradient id="fStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ff99"/>
+      <stop offset="50%" stop-color="#00ffe1"/>
+      <stop offset="100%" stop-color="#00d1ff"/>
+    </linearGradient>
+    <filter id="fGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="140" fill="url(#fBg)"/>
+  <!-- Three stacked animated waves -->
+  <path d="M0,60 Q400,20 800,60 T1600,60 V140 H0 Z" fill="#00ff99" fill-opacity="0.1">
+    <animate attributeName="d" dur="8s" repeatCount="indefinite"
+             values="M0,60 Q400,20 800,60 T1600,60 V140 H0 Z;
+                     M0,60 Q400,100 800,60 T1600,60 V140 H0 Z;
+                     M0,60 Q400,20 800,60 T1600,60 V140 H0 Z"/>
+  </path>
+  <path d="M0,80 Q400,50 800,80 T1600,80 V140 H0 Z" fill="#00ffe1" fill-opacity="0.08">
+    <animate attributeName="d" dur="10s" repeatCount="indefinite"
+             values="M0,80 Q400,50 800,80 T1600,80 V140 H0 Z;
+                     M0,80 Q400,110 800,80 T1600,80 V140 H0 Z;
+                     M0,80 Q400,50 800,80 T1600,80 V140 H0 Z"/>
+  </path>
+  <path d="M0,100 Q400,80 800,100 T1600,100 V140 H0 Z" fill="#00d1ff" fill-opacity="0.07">
+    <animate attributeName="d" dur="12s" repeatCount="indefinite"
+             values="M0,100 Q400,80 800,100 T1600,100 V140 H0 Z;
+                     M0,100 Q400,120 800,100 T1600,100 V140 H0 Z;
+                     M0,100 Q400,80 800,100 T1600,100 V140 H0 Z"/>
+  </path>
+  <!-- Top glowing line -->
+  <path d="M0,50 Q400,10 800,50 T1600,50" fill="none" stroke="url(#fStroke)" stroke-width="2" filter="url(#fGlow)">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+             values="M0,50 Q400,10 800,50 T1600,50;
+                     M0,50 Q400,90 800,50 T1600,50;
+                     M0,50 Q400,10 800,50 T1600,50"/>
+  </path>
+  <!-- Footer text -->
+  <g font-family="monospace" fill="#00ff99" opacity="0.75" filter="url(#fGlow)">
+    <text x="800" y="118" text-anchor="middle" font-size="12" letter-spacing="2">
+      [ RAKSHANEX TECHNOLOGIES · SECURE · INNOVATE · EMPOWER ]
+    </text>
+  </g>
+</svg>

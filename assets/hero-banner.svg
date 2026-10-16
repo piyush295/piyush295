@@ -1,0 +1,234 @@
+<svg width="1600" height="500" viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Deep space background -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#000308"/>
+      <stop offset="40%" stop-color="#030f14"/>
+      <stop offset="100%" stop-color="#000204"/>
+    </linearGradient>
+    <!-- Pulsing core -->
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffe1" stop-opacity="0.65"/>
+      <stop offset="40%" stop-color="#00ff99" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#00ff99" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Side orb -->
+    <radialGradient id="orbSide" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff2bd6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff2bd6" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Neon line -->
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ff99" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00ff99"/>
+      <stop offset="100%" stop-color="#00d1ff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Scanning beam -->
+    <linearGradient id="scanBeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ff99" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00ffe1" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#00ff99" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="hardGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Isometric grid pattern -->
+    <pattern id="iso" width="60" height="35" patternUnits="userSpaceOnUse" patternTransform="skewX(-30)">
+      <path d="M 60 0 L 0 0 0 35" fill="none" stroke="#00ff99" stroke-opacity="0.11" stroke-width="1"/>
+    </pattern>
+    <pattern id="dotGrid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#00ff99" fill-opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1600" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Isometric floor grid for 3D feel -->
+  <g opacity="0.5">
+    <rect x="0" y="320" width="1600" height="180" fill="url(#iso)"/>
+    <!-- Horizon fade -->
+    <rect x="0" y="320" width="1600" height="180" fill="url(#bgGrad)" opacity="0.5"/>
+  </g>
+
+  <!-- Perspective lines converging to horizon (vanishing point effect) -->
+  <g stroke="#00ff99" stroke-opacity="0.26" stroke-width="1" filter="url(#hardGlow)">
+    <line x1="-100" y1="500" x2="800" y2="320"/>
+    <line x1="200" y1="500" x2="800" y2="320"/>
+    <line x1="500" y1="500" x2="800" y2="320"/>
+    <line x1="800" y1="500" x2="800" y2="320"/>
+    <line x1="1100" y1="500" x2="800" y2="320"/>
+    <line x1="1400" y1="500" x2="800" y2="320"/>
+    <line x1="1700" y1="500" x2="800" y2="320"/>
+  </g>
+  <!-- Horizontal receding lines for the 3D floor -->
+  <g stroke="#00ff99" stroke-opacity="0.18" stroke-width="1">
+    <line x1="0" y1="340" x2="1600" y2="340"/>
+    <line x1="0" y1="365" x2="1600" y2="365"/>
+    <line x1="0" y1="395" x2="1600" y2="395"/>
+    <line x1="0" y1="430" x2="1600" y2="430"/>
+    <line x1="0" y1="470" x2="1600" y2="470"/>
+  </g>
+
+  <!-- Dot grid overlay (upper half) -->
+  <rect width="1600" height="320" fill="url(#dotGrid)"/>
+
+  <!-- Side orbs for depth -->
+  <circle cx="150" cy="250" r="140" fill="url(#orbSide)">
+    <animate attributeName="r" values="140;170;140" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1450" cy="180" r="180" fill="url(#coreGlow)">
+    <animate attributeName="r" values="180;210;180" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Central holographic core (pulsing orb) -->
+  <g transform="translate(800 180)">
+    <circle r="100" fill="url(#coreGlow)">
+      <animate attributeName="r" values="100;130;100" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="55" fill="none" stroke="#00ffe1" stroke-width="1.5" stroke-opacity="0.75" filter="url(#softGlow)">
+      <animate attributeName="r" values="55;70;55" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="40" fill="none" stroke="#00ff99" stroke-width="1.2" stroke-dasharray="4 6" stroke-opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="22" fill="#00ffe1" fill-opacity="0.85" filter="url(#softGlow)">
+      <animate attributeName="fill-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- RX logo in core -->
+    <text x="0" y="7" font-family="monospace" font-size="22" font-weight="bold" fill="#000" text-anchor="middle">RX</text>
+  </g>
+
+  <!-- Orbiting data satellites -->
+  <g transform="translate(800 180)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+      <circle cx="180" cy="0" r="6" fill="#00ff99" filter="url(#softGlow)"/>
+      <circle cx="-180" cy="0" r="4" fill="#00d1ff" filter="url(#softGlow)"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="26s" repeatCount="indefinite"/>
+      <circle cx="220" cy="0" r="5" fill="#ff2bd6" filter="url(#softGlow)"/>
+    </g>
+  </g>
+
+  <!-- Scanning laser beam sweeping horizontally -->
+  <rect x="-200" y="0" width="200" height="500" fill="url(#scanBeam)" opacity="0.6">
+    <animate attributeName="x" from="-200" to="1600" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Neon dashes top/bottom -->
+  <line x1="0" y1="80" x2="1600" y2="80" stroke="url(#neon)" stroke-width="2" stroke-dasharray="12 18" filter="url(#softGlow)">
+    <animate attributeName="stroke-dashoffset" from="0" to="300" dur="8s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" y1="420" x2="1600" y2="420" stroke="url(#neon)" stroke-width="2" stroke-dasharray="12 18" filter="url(#softGlow)">
+    <animate attributeName="stroke-dashoffset" from="300" to="0" dur="8s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Matrix rain columns (subtle, left and right) -->
+  <g font-family="monospace" font-size="13" fill="#00ff99" opacity="0.42">
+    <text x="60" y="30">01</text>
+    <text x="60" y="30"><animate attributeName="y" values="30;500" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="7s" repeatCount="indefinite"/>10110</text>
+    <text x="110" y="60"><animate attributeName="y" values="60;500" dur="9s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="9s" begin="1s" repeatCount="indefinite"/>101</text>
+    <text x="200" y="20"><animate attributeName="y" values="20;500" dur="11s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="11s" begin="2s" repeatCount="indefinite"/>01011</text>
+    <text x="1480" y="40"><animate attributeName="y" values="40;500" dur="10s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="10s" begin="0.5s" repeatCount="indefinite"/>1101</text>
+    <text x="1420" y="80"><animate attributeName="y" values="80;500" dur="8s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="8s" begin="2s" repeatCount="indefinite"/>001</text>
+    <text x="1540" y="20"><animate attributeName="y" values="20;500" dur="12s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="12s" begin="3s" repeatCount="indefinite"/>10110</text>
+  </g>
+
+  <!-- Floating holographic ID cards (3D-feel with shadow and perspective) -->
+  <g filter="url(#softGlow)">
+    <!-- Card 1: TryHackMe rank -->
+    <g transform="translate(260 150) rotate(-6)">
+      <rect x="-80" y="-40" width="160" height="80" rx="8" fill="#030f14" fill-opacity="0.85" stroke="#00ff99" stroke-opacity="0.75" stroke-width="1.5"/>
+      <rect x="-80" y="-40" width="160" height="18" rx="8" fill="#00ff99" fill-opacity="0.18"/>
+      <text x="-72" y="-27" font-family="monospace" font-size="10" fill="#00ff99">THM.rank</text>
+      <text x="0" y="12" text-anchor="middle" font-family="monospace" font-size="30" font-weight="bold" fill="#00ffe1">#145</text>
+      <text x="0" y="30" text-anchor="middle" font-family="monospace" font-size="9" fill="#9eecd1">GLOBAL</text>
+      <animateTransform attributeName="transform" type="translate" values="260 150; 260 142; 260 150" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <!-- Card 2: Certifications -->
+    <g transform="translate(1340 240) rotate(5)">
+      <rect x="-80" y="-40" width="160" height="80" rx="8" fill="#030f14" fill-opacity="0.85" stroke="#00d1ff" stroke-opacity="0.75" stroke-width="1.5"/>
+      <rect x="-80" y="-40" width="160" height="18" rx="8" fill="#00d1ff" fill-opacity="0.18"/>
+      <text x="-72" y="-27" font-family="monospace" font-size="10" fill="#00d1ff">certifications</text>
+      <text x="0" y="12" text-anchor="middle" font-family="monospace" font-size="30" font-weight="bold" fill="#00ffe1">50+</text>
+      <text x="0" y="30" text-anchor="middle" font-family="monospace" font-size="9" fill="#9eecd1">EC-C · CISCO · GCP</text>
+      <animateTransform attributeName="transform" type="translate" values="1340 240; 1340 248; 1340 240" dur="6s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <!-- Card 3: Books -->
+    <g transform="translate(400 320) rotate(2)">
+      <rect x="-70" y="-32" width="140" height="64" rx="7" fill="#030f14" fill-opacity="0.85" stroke="#ff2bd6" stroke-opacity="0.7" stroke-width="1.5"/>
+      <rect x="-70" y="-32" width="140" height="15" rx="7" fill="#ff2bd6" fill-opacity="0.18"/>
+      <text x="-62" y="-22" font-family="monospace" font-size="9" fill="#ff2bd6">books.published</text>
+      <text x="0" y="10" text-anchor="middle" font-family="monospace" font-size="24" font-weight="bold" fill="#ff95f0">04</text>
+      <animateTransform attributeName="transform" type="translate" values="400 320; 400 314; 400 320" dur="7s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <!-- Card 4: SOC/SAL1 -->
+    <g transform="translate(1200 350) rotate(-4)">
+      <rect x="-70" y="-28" width="140" height="56" rx="7" fill="#030f14" fill-opacity="0.85" stroke="#00ff99" stroke-opacity="0.7" stroke-width="1.5"/>
+      <rect x="-70" y="-28" width="140" height="14" rx="7" fill="#00ff99" fill-opacity="0.18"/>
+      <text x="-62" y="-18" font-family="monospace" font-size="9" fill="#00ff99">tryhackme.cert</text>
+      <text x="0" y="12" text-anchor="middle" font-family="monospace" font-size="19" font-weight="bold" fill="#00ffe1">SAL1</text>
+      <animateTransform attributeName="transform" type="translate" values="1200 350; 1200 344; 1200 350" dur="5.5s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+
+  <!-- Main title + role -->
+  <g filter="url(#softGlow)">
+    <text x="800" y="100" text-anchor="middle" font-family="monospace" font-size="46" font-weight="bold" fill="#00ffe1" letter-spacing="4">
+      PIYUSH KUMAR
+    </text>
+    <text x="800" y="128" text-anchor="middle" font-family="monospace" font-size="14" fill="#9eecd1" letter-spacing="2">
+      [ HACKER · PENTESTER · SOC ANALYST · DIGITAL FORENSICS · AUTHOR ]
+    </text>
+    <text x="800" y="152" text-anchor="middle" font-family="monospace" font-size="12" fill="#00ff99" letter-spacing="1">
+      Founder &amp; Director · RAKSHANEX TECHNOLOGIES
+    </text>
+  </g>
+
+  <!-- Terminal boot sequence -->
+  <g font-family="monospace" font-size="12" fill="#00ff99" opacity="0.85">
+    <text x="60" y="470">
+      <tspan opacity="0">[OK] loading identity_module ...</tspan>
+      <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.3s" fill="freeze"/>
+      [OK] loading identity_module ...
+    </text>
+    <text x="60" y="490">
+      <tspan opacity="0">[OK] mounting secure_shell ... /dev/rakshanex</tspan>
+      <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.3s" fill="freeze"/>
+      [OK] mounting secure_shell ... /dev/rakshanex
+    </text>
+    <text x="900" y="470">
+      <tspan opacity="0">[OK] initializing offensive_recon ... ready</tspan>
+      <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.3s" fill="freeze"/>
+      [OK] initializing offensive_recon ... ready
+    </text>
+    <text x="900" y="490">
+      <tspan opacity="0">[OK] handshake complete · session uplink stable</tspan>
+      <animate attributeName="opacity" from="0" to="1" begin="2.6s" dur="0.3s" fill="freeze"/>
+      [OK] handshake complete · session uplink stable
+    </text>
+  </g>
+
+  <!-- Corner HUD brackets -->
+  <g stroke="#00ff99" stroke-width="2" fill="none" filter="url(#softGlow)">
+    <path d="M20,20 L20,60 M20,20 L60,20"/>
+    <path d="M1580,20 L1580,60 M1580,20 L1540,20"/>
+    <path d="M20,480 L20,440 M20,480 L60,480"/>
+    <path d="M1580,480 L1580,440 M1580,480 L1540,480"/>
+  </g>
+</svg>
